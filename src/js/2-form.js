@@ -16,8 +16,8 @@
   form.addEventListener('input', (e) => {
     const {email, message}=e.currentTarget.elements;
     const userData = {
-      email: emailInput.value.trim(), 
-      message: messageInput.value.trim(),
+      email: email.value.trim(), 
+      message: message.value.trim(),
     };    
     localStorage.setItem(storageKey, JSON.stringify(userData));
 }); 
