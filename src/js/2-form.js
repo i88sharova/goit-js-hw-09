@@ -25,11 +25,16 @@
 form.addEventListener('submit', (e) => {
 e.preventDefault();
 const {email, message}=form.elements;
-    if (email.value!=='' && message.value!=='') {
-      const userData={
-        email: email.value.trim(),
-        message: message.value.trim,
-      }
+const trimmedEmail = email.value.trim();
+const trimmedMessage = message.value.trim();
+
+if (trimmedEmail !== '' && trimmedMessage !== '') {
+  const userData = {
+    email: trimmedEmail,
+    message: trimmedMessage,
+  };
+
+  console.log(userData);
     
         console.log(userData);
     } else {
